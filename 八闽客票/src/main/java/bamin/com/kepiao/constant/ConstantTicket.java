@@ -18,7 +18,7 @@ public class ConstantTicket
         //服务器上Banner的地址
         public static final String GET_BANNER_IMG = EverythingConstant.HOST + "/bmpw/picture/getpictures";
         //检测软件升级-八闽云服务地址
-        public static final String UP_GRADE = EverythingConstant.HOST + "/bmpw/apk/upgradea.txt";
+        public static final String UP_GRADE = EverythingConstant.HOST + "/bmpw/apk/upgradea_piaowu.txt";
         //获取联系人
         public static final String GET_USED_CONTACT = EverythingConstant.HOST + "/bmpw/person/findperson";
         //删除联系人

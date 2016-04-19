@@ -102,7 +102,7 @@ public class SmsLoginActivity extends AppCompatActivity implements View.OnClickL
                             //每次存储唯一标识
                             final String DeviceId = Installation.id(SmsLoginActivity.this);
                             //向后台服务推送用户短信验证成功，发送手机号----start----//
-                            String url = EverythingConstant.HOST+"/bmpw/front/FrontLogin?phone=" + mPhoneNum+"&login_id="+DeviceId;
+                            String url = EverythingConstant.HOST+"/bmpw/front/FrontLogin?phone=" + mPhoneNum+"&login_id="+DeviceId+"&flag=1";
                             HTTPUtils.get(SmsLoginActivity.this, url, new VolleyListener() {
                                 public void onErrorResponse(VolleyError volleyError) {
                                 }
@@ -294,6 +294,7 @@ public class SmsLoginActivity extends AppCompatActivity implements View.OnClickL
                     map.put("phone", phone);
                     map.put("login_id", DeviceId);
                     map.put("password", password);
+                    map.put("flag","1");
                     HTTPUtils.post(SmsLoginActivity.this, url, map, new VolleyListener() {
                         @Override
                         public void onErrorResponse(VolleyError volleyError) {

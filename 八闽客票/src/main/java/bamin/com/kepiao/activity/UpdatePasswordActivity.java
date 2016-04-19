@@ -180,6 +180,7 @@ public class UpdatePasswordActivity extends AppCompatActivity implements View.On
                         map.put("phone", mPhoneNum);
                         map.put("login_id", DeviceId);
                         map.put("password", password01);
+                        map.put("flag","1");//长途客票对应1
                         HTTPUtils.post(UpdatePasswordActivity.this, url, map, new VolleyListener() {
                             @Override
                             public void onErrorResponse(VolleyError volleyError) {
